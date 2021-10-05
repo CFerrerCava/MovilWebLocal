@@ -1,0 +1,14 @@
+﻿
+@Html.React("Components.RootComponent", new
+{
+  someProp = "some value from .NET"
+})
+<!DOCTYPE html>
+<html>
+<head> 
+</head>
+<body>
+    @RenderBody() 
+    @Html.ReactInitJavaScript()
+</body>
+</html>
