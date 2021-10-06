@@ -4,10 +4,10 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
 	entry: './Content/components/expose-components.js',
 	output: {
-		filename: '[name].[contenthash:8].js',
+		filename: '[name].js',
 		globalObject: 'this',
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/dist/'
+		path: path.resolve(__dirname, 'Scripts/dist'),
+		//publicPath: '/dist/'
 	},
 	mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 	optimization: {
@@ -33,23 +33,23 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [
-		new ManifestPlugin({
-			fileName: 'asset-manifest.json',
-			generate: (seed, files) => {
-				const manifestFiles = files.reduce((manifest, file) => {
-					manifest[file.name] = file.path;
-					return manifest;
-				}, seed);
+	//plugins: [
+	//	new ManifestPlugin({
+	//		fileName: 'asset-manifest.json',
+	//		generate: (seed, files) => {
+	//			const manifestFiles = files.reduce((manifest, file) => {
+	//				manifest[file.name] = file.path;
+	//				return manifest;
+	//			}, seed);
 
-				const entrypointFiles = files.filter(x => x.isInitial && !x.name.endsWith('.map')).map(x => x.path);
+	//			const entrypointFiles = files.filter(x => x.isInitial && !x.name.endsWith('.map')).map(x => x.path);
 
-				return {
-					files: manifestFiles,
-					entrypoints: entrypointFiles,
-				};
-			},
-		}),
-	],
+	//			return {
+	//				files: manifestFiles,
+	//				entrypoints: entrypointFiles,
+	//			};
+	//		},
+	//	}),
+	//],
 	watch:true,
 };

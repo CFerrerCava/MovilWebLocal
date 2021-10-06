@@ -10,9 +10,12 @@ namespace MovilWebLocal
 		public static void Configure()
 		{
 			ReactSiteConfiguration.Configuration
-			  .SetLoadBabel(false)
-			  .SetLoadReact(false)
-			  .SetReactAppBuildPath("~/dist");
+			  .SetLoadBabel(true)
+			  .SetLoadReact(true)
+			  //.SetReactAppBuildPath("~/wwwroot/dist");
+			.AddScriptWithoutTransform("~/Scripts/dist/runtime.js")
+  .AddScriptWithoutTransform("~/Scripts/dist/vendor.js")
+  .AddScriptWithoutTransform("~/Scripts/dist/main.js");
 			JsEngineSwitcher.Current.DefaultEngineName = V8JsEngine.EngineName;
 			JsEngineSwitcher.Current.EngineFactories.AddV8();
 		}

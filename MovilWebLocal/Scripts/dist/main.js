@@ -20,7 +20,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar Comp = function Comp() {\n  return /*#__PURE__*/React.createElement(\"div\", null, \"asdasdasd\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Comp);\n\n//# sourceURL=webpack:///./Content/components/comp.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar Comp = function Comp() {\n  return /*#__PURE__*/React.createElement(\"div\", null, \"asdasdasda\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Comp);\n\n//# sourceURL=webpack:///./Content/components/comp.jsx?");
 
 /***/ }),
 

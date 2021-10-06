@@ -1,6 +1,6 @@
 ﻿const Comp = () => {
     return ( <div>
-        asdasdasd
+        asdasdasda 
         </div>)
 }
 export default Comp;
